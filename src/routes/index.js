@@ -11,7 +11,7 @@ import UserView from '../views/UserView';
 Vue.use(VueRouter);
 
 export default new VueRouter({
-  history: true,
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -34,7 +34,7 @@ export default new VueRouter({
       component: ItemView,
     },
     {
-      path: '/user',
+      path: '/user/:id',
       component: UserView,
     }
 
