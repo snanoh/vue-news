@@ -20,6 +20,10 @@ function fetchJobsList(){
     return axios.get(`${config.baseUrl}jobs/1.json`);
 }
 
+function fecthList(pageName){
+    return axios.get(`${config.baseUrl}${pageName}/1.json`);
+}
+
 function fecthUserInfo(username){
     return axios.get(`${config.baseUrl}user/${username}.json`);
 }
@@ -29,10 +33,13 @@ function fetchItemInfo(id){
 }
 
 
+
+
 export {
     fetchNewsList,
     fetchJobsList,
     fetchAskList,
     fecthUserInfo,
-    fetchItemInfo
+    fetchItemInfo,
+    fecthList
 }
